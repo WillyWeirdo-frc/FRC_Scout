@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRC Scouting Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .checkbox-group, .radio-group {
+            margin-top: 8px;
+            margin-bottom: 16px;
+        }
+
+        .checkbox-group input, .radio-group input {
+            margin-right: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>FRC Scouting Form</h1>
+        <form action="https://script.google.com/macros/s/AKfycbzNT0NylVCf22Sq55bBOYotNemL0_LWMhzi9gLu1w6OHqngnGEoJf1SRMxNxG-cXi9vcA/exec" method="post">
+            <label for="team-number">Team Number:</label>
+            <input type="text" id="team-number" name="team-number" placeholder="Enter team number" required>
+
+            <label for="match-stage">Match Stage:</label>
+            <input type="text" id="match-stage" name="match-stage" placeholder="Enter match stage (1,2,3...)">
+
+            <label>Where can the team score?</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="score-level" value="L1"> Level 1</label>
+                <label><input type="checkbox" name="score-level" value="L2"> Level 2</label>
+                <label><input type="checkbox" name="score-level" value="L3"> Level 3</label>
+                <label><input type="checkbox" name="score-level" value="L4"> Level 4</label>
+            </div>
+
+            <label>Where is the robot starting?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="starting-position" value="blue1" required> Blue 1</label>
+                <label><input type="radio" name="starting-position" value="blue2"> Blue 2</label>
+                <label><input type="radio" name="starting-position" value="blue3"> Blue 3</label>
+                <label><input type="radio" name="starting-position" value="red1"> Red 1</label>
+                <label><input type="radio" name="starting-position" value="red2"> Red 2</label>
+                <label><input type="radio" name="starting-position" value="red3"> Red 3</label>
+            </div>
+
+            <label>Parking Position:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="parking-position" value="high" required> High Railing</label>
+                <label><input type="radio" name="parking-position" value="middle"> Middle Railing</label>
+                <label><input type="radio" name="parking-position" value="none"> Not Parking</label>
+            </div>
+
+            <label>Where is the algae?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="algae" value="ground" required> Ground</label>
+                <label><input type="radio" name="algae" value="reef"> On reef</label>
+                <label><input type="radio" name="algae" value="none"> No</label>
+            </div>
+
+            <label for="observations">Is there any other observation?</label>
+            <textarea id="observations" name="observations" rows="4" placeholder="Enter any additional observations here"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+        <footer>
+            Powered by Savage Tumaz Scouting Team (mainly by William Liao the GOAT)
+        </footer>
+    </div>
+</body>
+</html>
